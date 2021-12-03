@@ -3,9 +3,11 @@ var fetchButton = document.getElementById('fetch-button');
 
 // `getApi` function is called when the `fetchButton` is clicked
 
-function getApi() {
+function getApi(event) {
+  event.preventDefault();
+  var user = "Facebook"
   // TODO: Insert the API url to get a list of your repos
-  var requestUrl = '';
+  var requestUrl = 'https;//api.github.com/users/';
 
   fetch(requestUrl)
     .then(function(response) {
